@@ -1,6 +1,6 @@
 # Smashtag
-learning swift
+Learning swift
 
-update for Xcode 7.0 Swift 2.0
+Update for Xcode 7.0 Swift 2.0
 
-fix Twitter parser bug (NSDateFormatter locale)
+Fix Twitter parser bug (NSDateFormatter locale)
