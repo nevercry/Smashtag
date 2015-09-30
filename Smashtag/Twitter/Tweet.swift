@@ -24,6 +24,7 @@ public class Tweet : CustomStringConvertible
     public var hashtags = [IndexedKeyword]()
     public var urls = [IndexedKeyword]()
     public var userMentions = [IndexedKeyword]()
+    public var mediaMentions = [IndexedKeyword]()
 
     public struct IndexedKeyword: CustomStringConvertible
     {
@@ -81,6 +82,7 @@ public class Tweet : CustomStringConvertible
                                 media.append(mediaItem)
                             }
                         }
+                        mediaMentions = getIndexedKeywords(mediaEntities, inText: text, prefix: "h")
                     }
                     let hashtagMentionsArray = data?.valueForKeyPath(TwitterKey.Entities.Hashtags) as? NSArray
                     hashtags = getIndexedKeywords(hashtagMentionsArray, inText: text, prefix: "#")

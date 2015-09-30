@@ -42,7 +42,7 @@ class ImageCollectionViewController: UICollectionViewController, UICollectionVie
     
     func zoom(gesture: UIPinchGestureRecognizer) {
         if gesture.state == .Changed {
-            scale += gesture.scale
+            scale *= gesture.scale
             gesture.scale = 1.0
         }
     }

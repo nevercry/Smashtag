@@ -68,7 +68,10 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         set {
             imageView.image = newValue
             imageView.sizeToFit()
-            
+            scrollView?.contentSize = imageView.frame.size
+            spinner?.stopAnimating()
+            scrollViewDidScrollOrZoom = false
+            autoScale()
         }
     }
     private var scrollViewDidScrollOrZoom = false
